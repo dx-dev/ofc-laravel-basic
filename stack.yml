@@ -2,10 +2,10 @@ provider:
   name: faas
   gateway: http://127.0.0.1:8080
 functions:
-  stack-laravel-basic:
+  laravel-basic:
     lang: dockerfile
     handler: ./
-    image: stack-laravel-basic:v0.0.1
+    image: laravel-basic:v0.0.1
     readonly_root_filesystem: false
     labels:
       com.openfaas.scale.zero: false
