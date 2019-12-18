@@ -1,6 +1,6 @@
 # Example project
 
-This deployment has app container reference. 
+This deployment has [app container](https://github.com/dx-oss/php-laravel-basic) reference. 
 
 The container could have private packages and could be update this repository when a new version is pushed.
 
