@@ -1,0 +1,23 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+functions:
+  stack-laravel-basic:
+    lang: dockerfile
+    handler: ./
+    image: stack-laravel-basic:v0.0.1
+    readonly_root_filesystem: false
+    labels:
+      com.openfaas.scale.zero: false
+    environment:
+      ENTRYPOINT_DEBUG: true
+      ENTRYPOINT_ENVFILE: /var/openfaas/secrets/dotenv
+      write_debug: true
+      read_debug: true
+    # limits:
+    #   memory: 40Mi
+    #   cpu: 300m
+    # requests:
+    #   memory: 250Mi
+    #   cpu: 300m
+      
